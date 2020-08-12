@@ -14,8 +14,16 @@
 		<javaee.version>8.0</javaee.version>
 		<spring.version>5.2.7.RELEASE</spring.version>
 	</properties>
-
+ 
 	<dependencies>
+
+		<!-- Linking backend project -->
+		<dependency>
+			<groupId>com.abhay</groupId>
+			<artifactId>shoppingbackend</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
 		<!-- JAVA EE API -->
 		<dependency>
 			<groupId>javax</groupId>
@@ -38,7 +46,7 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-		
+
 		<!-- JSTL -->
 		<dependency>
 			<groupId>jstl</groupId>
