@@ -3,6 +3,20 @@
  * Copyright 2013-2020 Start Bootstrap
  * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-shop-homepage/blob/master/LICENSE)
  */
+html {
+	position: relative;
+	height: 100%;
+}
+
 body {
-  padding-top: 56px;
+	padding-top: 56px;
+	height: 100%;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	height: 60px;
 }
