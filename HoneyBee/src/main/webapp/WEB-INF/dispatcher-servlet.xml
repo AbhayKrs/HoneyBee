@@ -12,7 +12,7 @@
 	<context:component-scan
 		base-package="com.abhay.HoneyBee.controller"/>
 	<context:component-scan
-		base-package="com.abhay.shoppingbackend.daoimpl"/>
+		base-package="com.abhay.shoppingbackend"/>
 
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
