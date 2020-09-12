@@ -14,20 +14,25 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
-	<meta name="author" content="">
+	<meta name="description" content="Online Shopping Website Using Springm">
+	<meta name="author" content="Abhay Kumar">
 	
 	<title>HoneyBee Shopping - ${title}</title>
 	
 	<script>
 		window.menu = '${title}';
+		window.contextRoot = '${contextRoot}';
 	</script>
 	
 	<!-- Bootstrap core CSS -->
-	<link href="${css}/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 	
 	<!-- Custom styles for this template -->
-	<link href="${css}/myapp.css" rel="stylesheet">
+	<link href="${css}/pagestyle.css" rel="stylesheet">
+	
+	<!-- dataTable Boostrap CSS -->
+	<link href="${css}/dataTables.bootstrap4.css" rel="stylesheet">
 </head>
 
 <body>
@@ -57,17 +62,26 @@
 			<c:if test="${userClickAllProducts==true or userClickCategoryProducts==true}">
 				<%@include file="listProducts.jsp"%>
 			</c:if>
+			
+			<!-- Load only when user clicks view product -->
+			<c:if test="${userClickViewProduct==true}">
+				<%@include file="singleProduct.jsp"%>
+			</c:if>
 		</div>
 
 
 		<!-- Footer -->
 		<%@include file="./shared/footer.jsp"%>
 
-
-
 		<!-- Bootstrap core JavaScript -->
 		<script src="${js}/jquery.js"></script>
-		<script src="${js}/bootstrap.bundle.min.js"></script>
+		<script src="${js}/bootstrap.min.js"></script>
+		
+		<!-- DataTable Plugin -->
+		<script src="${js}/jquery.dataTables.js"></script>
+		
+		<!-- DataTable Bootstrap Script -->
+		<script src="${js}/dataTables.bootstrap4.js"></script>
 
 		<!-- Self-coded JavaScript -->
 		<script src="${js}/myapp.js"></script>
