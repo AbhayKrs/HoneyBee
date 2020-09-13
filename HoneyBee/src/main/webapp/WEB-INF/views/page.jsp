@@ -29,7 +29,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 	
 	<!-- Custom styles for this template -->
-	<link href="${css}/pagestyle.css" rel="stylesheet">
+	<link href="${css}/styles.css" rel="stylesheet">
 	
 	<!-- dataTable Boostrap CSS -->
 	<link href="${css}/dataTables.bootstrap4.css" rel="stylesheet">
@@ -67,11 +67,12 @@
 			<c:if test="${userClickViewProduct==true}">
 				<%@include file="singleProduct.jsp"%>
 			</c:if>
+			
+			<!-- Load only when user clicks manage products -->
+			<c:if test="${userClickManageProducts==true}">
+				<%@include file="manageProducts.jsp"%>
+			</c:if>
 		</div>
-
-
-		<!-- Footer -->
-		<%@include file="./shared/footer.jsp"%>
 
 		<!-- Bootstrap core JavaScript -->
 		<script src="${js}/jquery.js"></script>
@@ -87,5 +88,6 @@
 		<script src="${js}/myapp.js"></script>
 	</div>
 </body>
-
+<!-- Footer -->
+		<%@include file="./shared/footer.jsp"%>
 </html>
